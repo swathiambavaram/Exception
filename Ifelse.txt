@@ -1,0 +1,66 @@
+package Exception;
+
+public class Pgrmone {
+private String Username;
+private String Password;
+public String getUsername() {
+	return Username;
+}
+public void setUsername(String username) {
+	Username = username;
+}
+public String getPassword() {
+	return Password;
+}
+public void setPassword(String password) {
+	Password = password;
+}
+@Override
+public String toString() {
+	return "Pgrmone [Username=" + Username + ", Password=" + Password + "]";
+}
+
+}
+
+Main file
+
+package Exception;
+import java.util.Scanner;
+public class Pgmain {
+public static void main(String args[])
+{
+	Scanner sc = new Scanner(System.in);
+    System.out.println("Enter username");
+    String a = sc.next();
+    System.out.println("Enter password");
+    String b = sc.next();
+    if(a.equals("admin") && b.equals("admin123")) {
+    System.out.println("ouput:-");
+    System.out.println("username and password is matched");
+    }
+    else 
+    {
+    System.out.println("ouput:-");
+     System.out.println("InvalidCrentialException");
+
+    }	
+}
+}
+
+Output
+
+condition is satisfy:
+Enter username
+admin
+Enter password
+admin123
+ouput:-
+username and password is matched
+
+condition is not satisfy:
+Enter username
+admin
+Enter password
+admin
+ouput:-
+InvalidCrentialException
